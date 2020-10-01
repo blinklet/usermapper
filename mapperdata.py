@@ -60,11 +60,11 @@ student04 = dict(
 students = [student01, student02, student03]
 
 ip = {
-    "Router01" : "10.0.30.1",
-    "Router02" : "10.0.30.2",
-    "Server01" : "10.0.30.101",
-    "Server02" : "10.0.30.102",
-    "Server03" : "10.0.30.103"
+    "Router01" : "10.0.40.1",
+    "Router02" : "10.0.40.2",
+    "Server01" : "10.0.40.101",
+    "Server02" : "10.0.40.102",
+    "Server03" : "10.0.40.103"
 }
             
 
