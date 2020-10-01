@@ -1,0 +1,62 @@
+<user-mapping>
+    <authorize username="student01" password="lI62d4WUDKNv">
+        <connection name="Router01">
+            <protocol>ssh</protocol>
+            <param name="hostname">10.0.10.1</param>
+            <param name="port">22</param>
+            <param name="username">admin</param>
+            <param name="password">admin</param>
+        </connection>
+        <connection name="Router02">
+            <protocol>ssh</protocol>
+            <param name="hostname">10.0.10.2</param>
+            <param name="port">22</param>
+            <param name="username">admin</param>
+            <param name="password">admin</param>
+        </connection>
+        <connection name="Server01">
+            <protocol>ssh</protocol>
+            <param name="hostname">10.0.10.101</param>
+            <param name="port">22</param>
+            <param name="username">root</param>
+            <param name="password">root</param>
+        </connection>
+        <connection name="Server02">
+            <protocol>ssh</protocol>
+            <param name="hostname">10.0.10.102</param>
+            <param name="port">22</param>
+            <param name="username">root</param>
+            <param name="password">root</param>
+        </connection>
+    </authorize>
+    <authorize username="student02" password="UwBF9HJ3Astu">
+        <connection name="Router01">
+            <protocol>ssh</protocol>
+            <param name="hostname">10.0.10.1</param>
+            <param name="port">22</param>
+            <param name="username">admin</param>
+            <param name="password">admin</param>
+        </connection>
+        <connection name="Router02">
+            <protocol>ssh</protocol>
+            <param name="hostname">10.0.10.2</param>
+            <param name="port">22</param>
+            <param name="username">admin</param>
+            <param name="password">admin</param>
+        </connection>
+        <connection name="Server01">
+            <protocol>ssh</protocol>
+            <param name="hostname">10.0.10.101</param>
+            <param name="port">22</param>
+            <param name="username">root</param>
+            <param name="password">root</param>
+        </connection>
+        <connection name="Server02">
+            <protocol>ssh</protocol>
+            <param name="hostname">10.0.10.102</param>
+            <param name="port">22</param>
+            <param name="username">root</param>
+            <param name="password">root</param>
+        </connection>
+    </authorize>
+</user-mapping>
