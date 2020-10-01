@@ -57,14 +57,14 @@ student04 = dict(
     devices=s4device
 )
 
-students = [student01, student02, student03, student04]
+students = [student01, student02, student03]
 
 ip = {
-    "Router01" : "10.0.20.1",
-    "Router02" : "10.0.20.2",
-    "Server01" : "10.0.20.101",
-    "Server02" : "10.0.20.102",
-    "Server03" : "10.0.20.103"
+    "Router01" : "10.0.30.1",
+    "Router02" : "10.0.30.2",
+    "Server01" : "10.0.30.101",
+    "Server02" : "10.0.30.102",
+    "Server03" : "10.0.30.103"
 }
             
 
