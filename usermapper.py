@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
-from mapperdata import students, ip
-
-def userloader(students_dir,ip_dir):
-    for student in students_dir:
-        for device in student["devices"]:
-            student["devices"][device]["hostname"]=ip_dir[device]
-    return students_dir
+from mapperdata import get_users
+import yaml
   
 def write_params(filename,parameters,indent):
     indent = indent + (" " *4)
@@ -40,8 +35,11 @@ def xmlwriter(students_dir):
     usermapping.write(f"</user-mapping>\n")
     usermapping.close()
 
+
 if __name__ == "__main__":
-    structure = userloader(students,ip)
+    stream = open('config.yaml', 'r')
+    configuration = yaml.safe_load(stream)
+    structure = get_users(configuration)
     xmlwriter(structure)
     
 
