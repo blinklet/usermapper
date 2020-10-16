@@ -33,7 +33,8 @@ def get_devices(dictionary):
 def get_users(dictionary):
     user_list=[]
 
-    for user_type, user_values in dictionary['users'].items():
+    for user_type in dictionary['users']:
+        user_values = dictionary['users'][user_type]
         suffix = int(user_values['username_suffix'])
         length = len(user_values['username_suffix'])
 
