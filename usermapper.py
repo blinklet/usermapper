@@ -5,7 +5,10 @@ import yaml
 def write_params(filename,parameters,indent):
     indent = indent + (" " *4)
     for name in parameters:
-        filename.write(f"{indent}<param name=\"{name}\">{parameters[name]}</param>\n")
+        if name == 'protocol':
+            filename.write(f'{indent}<protocol>{parameters[name]}</protocol>\n')
+        else:
+            filename.write(f"{indent}<param name=\"{name}\">{parameters[name]}</param>\n")
     indent = indent[:-4]
     return indent
 
