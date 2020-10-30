@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import yaml, secrets, string
 
 def get_user_passwords(pass_value,length=8):

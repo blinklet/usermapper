@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from mapperdata import get_users
 import yaml
   
