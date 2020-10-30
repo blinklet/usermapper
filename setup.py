@@ -1,6 +1,7 @@
 from setuptools import setup
 
 setup(
+    name='UserMapper',
     url='https://github.com/blinklet/usermapper',
     author='Brian Linkletter',
     author_email='mail@brianlinkletter.ca',
@@ -8,6 +9,6 @@ setup(
     install_requires=['PyYAML'],
     version='0.1',
     license='GPLv3',
-    description='An example of a python package from pre-existing code',
-    long_description=open('README.md').read(),
+    description='Create a user-mappimg.xml file',
+    long_description=open('README.md').read()
 )
