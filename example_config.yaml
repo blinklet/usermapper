@@ -12,7 +12,7 @@ users:
         username_suffix: '01'
         password: random
 
-Devices:
+devices:
 
     servers:
         quantity: 4
