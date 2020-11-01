@@ -28,7 +28,8 @@ def write_student(usermapping,students_dir):
         write_dev(usermapping,student["devices"],indent)
         usermapping.append(f"{indent}</authorize>\n")
 
-def xml_list(students_dir,usermapping):
+def xml_list(students_dir):
+    usermapping = []
     usermapping.append(f"<user-mapping>\n")
     write_student(usermapping,students_dir)
     usermapping.append(f"</user-mapping>\n")
@@ -37,7 +38,7 @@ def xml_list(students_dir,usermapping):
 
 def xml_file(students_dir,usermapping):
     userfile = open('user-mapping.xml', 'w')
-    userfile.writelines(xml_list(students_dir,usermapping)) 
+    userfile.writelines(xml_list(students_dir)) 
     userfile.close()
 
 
