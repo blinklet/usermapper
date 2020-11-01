@@ -30,14 +30,7 @@ def write_student(usermapping,students_dir):
         
         usermapping.append(f"{indent}</authorize>\n")
 
-def xmlwriter(students_dir,usermapping):
-    usermapping.append(f"<user-mapping>\n")
-    write_student(usermapping,students_dir)
-    usermapping.append(f"</user-mapping>\n")
-
-
-
-def xmlpage(students_dir,usermapping):
+def xml_list(students_dir,usermapping):
 
     usermapping.append(f"<user-mapping>\n")
     write_student(usermapping,students_dir)
@@ -45,9 +38,9 @@ def xmlpage(students_dir,usermapping):
     return(usermapping)
 
 
-def xmlfile(students_dir,usermapping):
+def xml_file(students_dir,usermapping):
     userfile = open('user-mapping.xml', 'w')
-    userfile.writelines(xmlpage(students_dir,usermapping)) 
+    userfile.writelines(xml_list(students_dir,usermapping)) 
     userfile.close()
 
 
@@ -60,8 +53,8 @@ if __name__ == "__main__":
     print()
     print(structure)
     print()
-    print(xmlpage(structure,usermapping))
-    xmlfile(structure,usermapping)
+    print(xml_list(structure,usermapping))
+    xml_file(structure,usermapping)
     
 
         
