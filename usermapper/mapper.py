@@ -1,4 +1,5 @@
 from usermapper.mapperdata import get_users
+# from usermapper.mapperdata import get_users
 import yaml
   
 def write_params(usermapping,parameters,indent):
@@ -42,22 +43,26 @@ def xmlpage(students_dir,usermapping):
     usermapping.append(f"<user-mapping>\n")
     write_student(usermapping,students_dir)
     usermapping.append(f"</user-mapping>\n")
+    return(usermapping)
 
 
 def xmlfile(students_dir,usermapping):
     userfile = open('user-mapping.xml', 'w')
-    usermapping.write() # TODO: reverse list and write lines to file
-
-
+    userfile.writelines(xmlpage(students_dir,usermapping)) 
+    userfile.close()
 
 
 if __name__ == "__main__":
     usermapping = []
-    stream = open('config.yaml', 'r')
+    stream = open('../config.yaml', 'r')
     configuration = yaml.safe_load(stream)
+    print(configuration)
     structure = get_users(configuration)
-    xmlfile(structure,usermapping)
+    print()
+    print(structure)
+    print()
     print(xmlpage(structure,usermapping))
+    xmlfile(structure,usermapping)
     
 
         
