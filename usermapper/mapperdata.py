@@ -53,7 +53,7 @@ def get_users(dictionary):
 
 if __name__ == "__main__":
 
-    stream = open('config.yaml', 'r')
+    stream = open('../config.yaml', 'r')
     configuration = yaml.safe_load(stream)
 
     for user_type in configuration['users']:
