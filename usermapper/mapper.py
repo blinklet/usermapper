@@ -1,5 +1,4 @@
-from usermapper.mapperdata import get_users
-# from usermapper.mapperdata import get_users
+from .mapperdata import get_users
 import yaml
   
 def write_params(usermapping,parameters,indent):
