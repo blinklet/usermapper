@@ -36,14 +36,13 @@ def xml_list(students_dir):
     return(usermapping)
 
 
-def xml_file(students_dir,usermapping):
+def xml_file(students_dir):
     userfile = open('user-mapping.xml', 'w')
     userfile.writelines(xml_list(students_dir)) 
     userfile.close()
 
 
 if __name__ == "__main__":
-    usermapping = []
     stream = open('../config.yaml', 'r')
     configuration = yaml.safe_load(stream)
     stream.close()
@@ -52,8 +51,8 @@ if __name__ == "__main__":
     print()
     print(structure)
     print()
-    print(xml_list(structure,usermapping))
-    xml_file(structure,usermapping)
+    print(xml_list(structure))
+    xml_file(structure)
     
 
         
