@@ -1,13 +1,13 @@
 users:
 
     trainers:
-        quantity: 2
+        quantity: 1
         username_prefix: trainer
         username_suffix: '01'
         password: random
         
     students:
-        quantity: 10
+        quantity: 1
         username_prefix: student
         username_suffix: '01'
         password: random
@@ -15,7 +15,7 @@ users:
 devices:
 
     servers:
-        quantity: 4
+        quantity: 1
         name_prefix: PC
         name_suffix: '09'
         hostname_prefix: '10.0.10.'
@@ -28,7 +28,7 @@ devices:
             password: root
             
     routers:
-        quantity: 4
+        quantity: 1
         name_prefix: R
         name_suffix: '01'
         hostname_prefix: '10.0.10.'
