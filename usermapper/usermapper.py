@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from mapperdata import get_users
+from .mapperdata import get_users
 import yaml
   
 def write_params(filename,parameters,indent):
@@ -38,12 +38,14 @@ def xmlwriter(students_dir):
     usermapping.write(f"</user-mapping>\n")
     usermapping.close()
 
-
-if __name__ == "__main__":
+def main():
     stream = open('config.yaml', 'r')
     configuration = yaml.safe_load(stream)
     structure = get_users(configuration)
     xmlwriter(structure)
+
+if __name__ == "__main__":
+    main()
     
 
         
