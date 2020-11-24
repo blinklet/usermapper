@@ -38,6 +38,17 @@ def xmlwriter(students_dir):
     usermapping.write(f"</user-mapping>\n")
     usermapping.close()
 
+help_text = '''
+Usermapper usage:
+
+    usermapper -i|--input <input filename> -o|--output <output filename>
+
+    Or, use no arguments if you wish to use one, or both of the default
+    filenames, listed below:
+
+        input default = config.yaml
+        output default = user-mapping.xml'''
+
 def main():
     stream = open('config.yaml', 'r')
     configuration = yaml.safe_load(stream)
