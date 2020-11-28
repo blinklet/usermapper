@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from .mapperdata import get_users
-import yaml
+import yaml, sys, os
   
 def write_params(filename,parameters,indent):
     indent = indent + (" " *4)
@@ -31,8 +31,8 @@ def write_student(filename,students_dir):
         
         filename.write(f"{indent}</authorize>\n")
 
-def xmlwriter(students_dir):
-    usermapping = open('user-mapping.xml', 'w')
+def xmlwriter(students_dir, output_file):
+    usermapping = open(output_file, 'w')
     usermapping.write(f"<user-mapping>\n")
     write_student(usermapping,students_dir)
     usermapping.write(f"</user-mapping>\n")
@@ -50,10 +50,45 @@ Usermapper usage:
         output default = user-mapping.xml'''
 
 def main():
-    stream = open('config.yaml', 'r')
+    #set default file names
+    config_file = 'config.yaml'
+    output_file = 'user-mapping.xml'
+
+    # Expect a maximum of five arguments
+    if len(sys.argv) > 5:
+        print('Too many arguments!')
+        print(help_text)
+        sys.exit(2)
+
+    # Make a copy of the argument list with the program name removed
+    args = sys.argv[1:]
+
+    while args:
+        argument = args.pop(0)
+        if argument == '-i' or argument == '--input':
+            config_file = args.pop(0)
+            if not os.path.exists(config_file):
+                print('Input file not found')
+                sys.exit(2)
+        elif argument == '-o' or argument == '--output':
+            output_file = args.pop(0)
+            output_dir = os.path.dirname(output_file)
+            if output_dir:
+                if not os.path.exists(output_dir):
+                    print('Output file directory does not exist!')
+                    sys.exit(2)
+        elif argument == '-h' or argument == '--help':
+            print(help_text)
+            sys.exit(0)
+        else:
+            print('Invalid arguments!')
+            print(help_text)
+            sys.exit(2)
+
+    stream = open(config_file, 'r')
     configuration = yaml.safe_load(stream)
     structure = get_users(configuration)
-    xmlwriter(structure)
+    xmlwriter(structure, output_file)
 
 if __name__ == "__main__":
     main()
