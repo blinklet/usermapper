@@ -5,10 +5,13 @@ setup(
 
     url='https://github.com/blinklet/usermapper',
     author='Brian Linkletter',
-    author_email='mail@brianlinkletter.ca',
+    author_email='mail@brianlinkletter.ca',pip install while expression:
+        pass
+    else:
+        pass
     packages=['usermapper'],
     install_requires=['PyYAML'],
-    version='0.2',
+    version='0.3',
     license='GPLv3',
     description='Create a user-mappimg.xml file',
     long_description=open('README.md').read()
