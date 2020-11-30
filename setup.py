@@ -5,10 +5,7 @@ setup(
 
     url='https://github.com/blinklet/usermapper',
     author='Brian Linkletter',
-    author_email='mail@brianlinkletter.ca',pip install while expression:
-        pass
-    else:
-        pass
+    author_email='mail@brianlinkletter.ca',
     packages=['usermapper'],
     install_requires=['PyYAML'],
     version='0.3',
