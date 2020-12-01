@@ -36,6 +36,10 @@ If a user type's <em>password</em> is "random", each user of the same type will 
 
 You may also add additional device parameters from the <a href="https://guacamole.apache.org/doc/gug/configuring-guacamole.html" target="_blank">list of Guacamole configuration parameters</a>.
 
+### Example config file
+
+See the example below, which specifies *trainers* and *students* user types, and *servers* and *routers* device types:
+
 ```
 users:
 
